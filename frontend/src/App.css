@@ -1,0 +1,8 @@
+@media (max-width: 560px) {
+    .sm-screen{
+        flex-direction: column;
+    }
+    .img-width{
+        width: 50%;
+    }
+}
