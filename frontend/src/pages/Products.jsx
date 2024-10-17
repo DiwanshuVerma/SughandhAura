@@ -1,9 +1,9 @@
 const reviewsData = [
-    { id: 1, image: 'src/assets/perfume1.png', name: 'POSSESS', title: 'About Product', content: 'Possess Perce with Possess Perfume....' },
-    { id: 2, image: 'src/assets/perfume2.png', name: 'Acqua di Gioia', title: 'About Product', content: 'Acqunce and freshness.' },
-    { id: 3, image: 'src/assets/perfume6.png', name: 'Givenchy Gentleman', title: 'About Product', content: 'ny occasion or evening out....' },
-    { id: 4, image: 'src/assets/perfume4.png', name: 'Poison Dior', title: 'About Product', content: 'Poison ing aura.' },
-    { id: 5, image: 'src/assets/perfume.png',  name: 'GUCCI Flora',title: 'About Product', content: 'Gucci Fl.' },
+    { id: 1, image: 'src/assets/perfume1.png', name: 'POSSESS', title: 'About Product', content: 'POSSESS perfume embodies an alluring blend of elegance and mystery. Its captivating notes of rich amber and floral hints create an intoxicating aura, evoking confidence and charm. Ideal for both day and night, this fragrance leaves a lasting impression, making every moment unforgettable. Embrace your essenPossess Perce with Possess Perfume....' },
+    { id: 2, image: 'src/assets/perfume2.png', name: 'Acqua di Gioia', title: 'About Product', content: 'Acqua di Gioia is a refreshing celebration of natures beauty. With its invigorating notes of mint, lemon, and jasmine, this fragrance captures the essence of a serene ocean breeze. Perfect for daily wear, it evokes feelings of joy and tranquility, making it a timeless choice for those who seek elega Acqunce and freshness.' },
+    { id: 3, image: 'src/assets/perfume6.png', name: 'Givenchy Gentleman', title: 'About Product', content: 'Givenchy Gentlemen is a sophisticated fragrance that embodies elegance and confidence. With rich notes of bergamot, leather, and patchouli, it creates a distinctive aroma that captivates the senses. Perfect for the modern man, this scent exudes charm and strength, making it an ideal choice for any occasion or evening out....' },
+    { id: 4, image: 'src/assets/perfume4.png', name: 'Poison Dior', title: 'About Product', content: 'Dior is a bold and captivating fragrance that embodies allure and mystery. With its intoxicating blend of sweet fruit, rich flowers, and warm spices, it evokes a sense of daring elegance. Perfect for evening wear, this perfume leaves a lasting impression, enticing those who encounter its enchant Poison ing aura.' },
+    { id: 5, image: 'src/assets/perfume.png',  name: 'GUCCI Flora',title: 'About Product', content: 'Gucci Flora is a vibrant and enchanting fragrance that captures the essence of a blooming garden. With notes of peony, citrus, and patchouli, it radiates femininity and grace. Perfect for day or night, this scent embodies a modern, sophisticated spirit, making every moment feel like a floral celebration' },
 
 ];
 import { ReviewForm } from "../components/ReviewForm";
@@ -18,7 +18,7 @@ const ReviewCard = ({ Key, name, image, title, content }) => {
     const submitComment = async (reviewData) => {
         try {
         
-            const response = await fetch('http://localhost:5000/reviews', {
+            const response = await fetch('https://sughandhaura.onrender.com/reviews', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

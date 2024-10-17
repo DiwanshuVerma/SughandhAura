@@ -56,7 +56,7 @@ const ProductPage = ({ product }) => {
 
             {/* Share Icons */}
             <ShareButtons
-                productUrl={`http://yourwebsite.com/products/${product.key}`}
+                productUrl={`https://sughandhaura.onrender.com/${product.key}`}
                 productName={`${product.name}`}
             />
         </div>
