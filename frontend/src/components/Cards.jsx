@@ -4,32 +4,32 @@ export const Card = () => {
     const navigate = useNavigate()
     const cards = [
         {
-            imgSrc: "src/assets/perfume.png",
+            imgSrc: "/assets/perfume.png",
             name: "GUCCI Flora",
             price: "$20.9",
         },
         {
-            imgSrc: "src/assets/perfume1.png",
+            imgSrc: "/assets/perfume1.png",
             name: "POSSESS",
             price: "$19.3",
         },
         {
-            imgSrc: "src/assets/perfume2.png",
+            imgSrc: "/assets/perfume2.png",
             name: "ACQUA di GIOIA",
             price: "$32.9",
         },
         {
-            imgSrc: "src/assets/perfume6.png",
+            imgSrc: "/assets/perfume6.png",
             name: "Givenchy Gentleman",
             price: "$28.9",
         },
         {
-            imgSrc: "src/assets/perfume4.png",
+            imgSrc: "/assets/perfume4.png",
             name: "Poision Dior",
             price: "$43.9",
         },
         {
-            imgSrc: "src/assets/perfume5.png",
+            imgSrc: "/assets/perfume5.png",
             name: "PERFUME",
             price: "soon...",
         },

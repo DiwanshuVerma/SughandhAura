@@ -10,32 +10,32 @@ export const Hero = () => {
         {
             title: "THE FRAGRANCE OF LIFE",
             description: "Gucci Flora: A vibrant bouquet of floral notes, fruits, and a hint of green, radiating femininity.",
-            imgSrc: "src/assets/perfume.png",
+            imgSrc: "/assets/perfume.png",
         },
         {
             title: "THE FRAGRANCE OF LIFE",
             description: "POSSESS: An enchanting blend of exotic spices and rich florals, exuding confidence and irresistible allure.",
-            imgSrc: "src/assets/perfume1.png",
+            imgSrc: "/assets/perfume1.png",
         },
         {
             title: "THE FRAGRANCE OF LIFE",
             description: "Acqua di Gioia: A refreshing breeze of citrus, floral notes, and aquatic essence, embodying tranquility.",
-            imgSrc: "src/assets/perfume2.png",
+            imgSrc: "/assets/perfume2.png",
         },
         {
             title: "THE FRAGRANCE OF LIFE",
             description: "A captivating essence of delicate florals and warm spices, evoking mystery and timeless elegance.",
-            imgSrc: "src/assets/perfume3.png",
+            imgSrc: "/assets/perfume3.png",
         },
         {
             title: "THE FRAGRANCE OF LIFE",
             description: "Poison Dior: An intoxicating blend of spicy notes, dark florals, and warm amber, captivating allure.",
-            imgSrc: "src/assets/perfume4.png",
+            imgSrc: "/assets/perfume4.png",
         },
         {
             title: "THE FRAGRANCE OF LIFE",
             description: "Givenchy Gentlemen Paris: A sophisticated fusion of bold spices, woody undertones, and refined elegance.",
-            imgSrc: "src/assets/perfume6.png",
+            imgSrc: "/assets/perfume6.png",
         },
     ];
 

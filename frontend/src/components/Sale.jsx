@@ -19,7 +19,7 @@ export const Sale = () => {
             <div className="absolute bottom-0 right-[90px] bg-blue-900 h-52 w-52 rounded-full blur-[100px] -z-10"></div>
 
             <div className="flex-[1.2]">
-                <img src="src/assets/sale perfume.png" alt=""  className=""/>
+                <img src="/assets/sale perfume.png" alt=""  className=""/>
             </div>
             <div className="flex flex-col items-start justify-evenly py-5 flex-1 ">
                 <h2 className="text-[#e2f280] font-medium text-xl">DEAL OF THE DAY!</h2>

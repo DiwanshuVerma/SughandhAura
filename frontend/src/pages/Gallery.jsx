@@ -1,24 +1,41 @@
 // src/Gallery.jsx
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 
 const images = [
-  'src/assets/gallery1.jpg',
-  'src/assets/gallery2.jpg',
-  'src/assets/gallery3.jpg',
-  'src/assets/gallery4.jpg',
-  'src/assets/gallery5.jpg',
-  'src/assets/gallery6.jpg',
-  'src/assets/gallery7.jpg',
-  'src/assets/gallery8.jpg',
-  'src/assets/gallery9.jpg',
-  'src/assets/gallery10.jpg',
-  'src/assets/gallery11.jpg',
-  'src/assets/gallery12.jpg',
+  '/assets/gallery1.jpg',
+  '/assets/gallery2.jpg',
+  '/assets/gallery3.jpg',
+  '/assets/gallery4.jpg',
+  '/assets/gallery5.jpg',
+  '/assets/gallery6.jpg',
+  '/assets/gallery7.jpg',
+  '/assets/gallery8.jpg',
+  '/assets/gallery9.jpg',
+  '/assets/gallery10.jpg',
+  '/assets/gallery11.jpg',
+  '/assets/gallery12.jpg',
 ];
 
+
+
 export const Gallery = () => {
+  const [showLoading, setShowLoading] = useState(true)
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setShowLoading(false)
+
+      return () => clearTimeout(timer)
+    }, 3000);
+  }, [])
+
   return (
     <div className="p-4 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
+
+      {showLoading && (
+      <p className='absolute top-[60%] left-[45%] text-4xl text-white'>Loading...</p>
+      )}
+      
     {images.map((image, index) => (
       <div
         key={index}

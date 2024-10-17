@@ -44,8 +44,8 @@ export const ReviewsPage = () => {
         fetchReviews();
     }, []);
 
-    if (loading) return <p>Loading...</p>;
-    if (error) return <p>Error: {error}</p>;
+    if (loading) return <p className='absolute top-1/2 left-1/2 text-3xl'>Loading...</p>;
+    if (error) return <p className='absolute top-1/2 left-1/2 text-3xl'>Error: {error}</p>;
 
     return (
         <div className="max-w-screen min-h-screen bg-gray-900 px-20 py-20">
