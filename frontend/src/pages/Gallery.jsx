@@ -33,7 +33,7 @@ export const Gallery = () => {
     <div className="p-4 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
 
       {showLoading && (
-      <p className='absolute top-[60%] left-[45%] text-4xl text-white'>Loading...</p>
+      <p className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-4xl text-white'>Loading...</p>
       )}
       
     {images.map((image, index) => (

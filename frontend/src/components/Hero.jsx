@@ -52,7 +52,7 @@ export const Hero = () => {
     };
 
     return (
-        <div className="w-full max-w-[1300px] m-auto h-screen px-6 lg:pt-16 pt-24">
+        <div className="w-full max-w-[1300px] m-auto h-screen sm:px-6 px-0 lg:pt-16 pt-24">
             <div className="relative flex overflow-hidden lg:h-[calc(100vh-14vh)] h-[calc(100vh-24vh)] isolate items-center">
                 {/* Slides */}
                 {slides.map((slide, index) => (
@@ -67,7 +67,7 @@ export const Hero = () => {
                     >
                         {/* Title and Description Section */}
                         <div className="flex-1 self-center">
-                            <h1 className="text-[2.5rem] md:text-[4.1rem] text-white font-medium ">{slide.title}</h1>
+                            <h1 className="text-[2.5rem] md:text-[4.1rem] px-2 text-white font-medium ">{slide.title}</h1>
                         </div>
 
                         {/* Image Section */}

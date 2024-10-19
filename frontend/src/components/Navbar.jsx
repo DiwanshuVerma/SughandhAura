@@ -37,7 +37,7 @@ export const Navbar = () => {
 
 
     return (
-        <nav className="z-30 px-[130px] flex justify-between items-center w-screen h-[10vh] bg-[#1f1f1f79] text-white backdrop-blur-[3.6px] border border-[rgba(28,27,27,0.08)] fixed top-0 left-0 right-0">
+        <nav className="z-30 sm:px-[130px] px-16 flex justify-between items-center w-screen h-[10vh] bg-[#1f1f1f79] text-white backdrop-blur-[3.6px] border border-[rgba(28,27,27,0.08)] fixed top-0 left-0 right-0">
             <div className="logo-container relative text-2xl flex items-center">
                 <button onClick={() => handleNavigation('/')}>SA</button>
             </div>

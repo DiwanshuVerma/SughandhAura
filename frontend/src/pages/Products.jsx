@@ -49,7 +49,7 @@ const ReviewCard = ({ Key, name, image, title, content }) => {
                 <h1 className="font-['Allura',cursive] lg:text-[3rem] text-[2.5rem]">{title}</h1>
                 <p className="lg:text-[1.6rem] text-[1.3rem]">{content}</p>
 
-                <div className="flex justify-between gap-6">
+                <div className="flex justify-between gap-6 flex-col sm:flex-row ">
                     <button onClick={toggleForm} className="p-3 text-[1.1rem] rounded bg-[#6A0DAD] hover:bg-[#9A4DFF]">
                         Write Review
                     </button>
