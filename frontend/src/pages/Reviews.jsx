@@ -1,3 +1,4 @@
+import loader from '/loading.gif'
 
 import { useEffect, useState } from 'react';
 
@@ -44,7 +45,7 @@ export const ReviewsPage = () => {
         fetchReviews();
     }, []);
 
-    if (loading) return <p className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-3xl'>Loading...</p>;
+    if (loading) return <p className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-3xl'><img src={loader} alt="Loading..." className='w-20'/></p>;
     if (error) return <p className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-3xl'>Error: {error}</p>;
 
     return (

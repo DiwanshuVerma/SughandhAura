@@ -1,7 +1,10 @@
 import { useNavigate } from "react-router-dom"
+import { useCart } from "../context/cart"
 
 export const Card = () => {
     const navigate = useNavigate()
+    const {addToCart} = useCart()
+
     const cards = [
         {
             imgSrc: "/assets/perfume.png",
@@ -51,7 +54,7 @@ export const Card = () => {
                     <div className="flex flex-col text-2xl items-center w-full gap-2">
                         <p>{card.name}</p>
                         <b>{card.price}</b>
-                        <button className="p-2 text-[1.2rem] bg-[#6A0DAD] hover:bg-[#9A4DFF] w-full">
+                        <button onClick={addToCart} className="p-2 text-[1.2rem] bg-[#6A0DAD] hover:bg-[#a930ff] active:bg-[#9A4DFF] w-full">
                             Add to Cart
                         </button>
                     </div>

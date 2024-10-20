@@ -4,9 +4,10 @@ import './App.css'
 
 import { Navbar } from './components/Navbar'
 import { Home } from './pages/Home'
-import {Gallery} from './pages/Gallery'
+import { Gallery } from './pages/Gallery'
 import { Products } from './pages/Products'
 import { ReviewsPage } from './pages/Reviews'
+import { CartProvider } from './context/cart'
 
 
 
@@ -22,16 +23,17 @@ const GalleryPage = () => {
 function App() {
 
   return (
-
+    <CartProvider>
       <BrowserRouter>
-      <Navbar/>
+        <Navbar />
         <Routes>
-          <Route path='/' element={<Home/>}/>
-          <Route path='/gallery' element={<GalleryPage/>}/>
-          <Route path='/products' element={<Products/>}/>
-          <Route path="/reviews" element={<ReviewsPage/>} />
+          <Route path='/' element={<Home />} />
+          <Route path='/gallery' element={<GalleryPage />} />
+          <Route path='/products' element={<Products />} />
+          <Route path="/reviews" element={<ReviewsPage />} />
         </Routes>
       </BrowserRouter>
+    </CartProvider>
   )
 }
 

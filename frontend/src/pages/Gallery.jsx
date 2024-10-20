@@ -1,4 +1,4 @@
-// src/Gallery.jsx
+
 import React, { useEffect, useState } from 'react';
 
 const images = [

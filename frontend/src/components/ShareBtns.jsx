@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaFacebookF, FaTwitter, FaWhatsapp, FaLinkedinIn } from 'react-icons/fa'
+import { FaInstagram, FaTwitter, FaWhatsapp, FaLinkedinIn } from 'react-icons/fa'
 
 const ShareButtons = ({ productUrl, productName }) => {
     const encodedUrl = encodeURIComponent(productUrl)
@@ -7,15 +7,7 @@ const ShareButtons = ({ productUrl, productName }) => {
 
     return (
         <div className="flex gap-4">
-            {/* Facebook */}
-            <a
-                href={`https://www.facebook.com/sharer/sharer.php?u=${encodedUrl}`}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="p-3 bg-blue-600 text-white rounded-full hover:bg-blue-800"
-            >
-                <FaFacebookF size={24} />
-            </a>
+
 
             {/* Twitter */}
             <a
@@ -46,6 +38,15 @@ const ShareButtons = ({ productUrl, productName }) => {
             >
                 <FaLinkedinIn size={24} />
             </a>
+            {/* Instagram */}
+            <a
+                href={`https://www.instagram.com/?url=${encodedUrl}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-3 bg-pink-600 text-white rounded-full hover:bg-pink-800"
+            >
+                <FaInstagram size={24} />
+            </a>
         </div>
     );
 };
@@ -56,7 +57,7 @@ const ProductPage = ({ product }) => {
 
             {/* Share Icons */}
             <ShareButtons
-                productUrl={`https://sughandhaura.onrender.com/${product.key}`}
+                productUrl={`https://sughandh-aura-fe.netlify.app/`}
                 productName={`${product.name}`}
             />
         </div>

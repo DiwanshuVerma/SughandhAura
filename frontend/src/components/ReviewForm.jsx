@@ -17,7 +17,7 @@ export const ReviewForm = ({ submitComment }) => {
           placeholder="Your Name"
           value={userName}
           onChange={(e) => setUserName(e.target.value)}
-          className="block mb-4 p-2"
+          className="block mb-4 p-2 bg-[#f9eaff] rounded"
           required
         />
         <input
@@ -25,14 +25,14 @@ export const ReviewForm = ({ submitComment }) => {
           placeholder="Rate it- 1 to 5"
           value={rating}
           onChange={(e) => setRating(e.target.value)}
-          className="block mb-4 p-2"
+          className="block mb-4 p-2 bg-[#f9eaff] rounded"
           required
         />
         <textarea
           placeholder="Write your comment"
           value={comment}
           onChange={(e) => setComment(e.target.value)}
-          className="block mb-4 p-2"
+          className="block mb-4 p-2 w-full bg-[#f9eaff] rounded text-lg"
           required
         />
         <button type="submit" className="p-2 bg-[#6A0DAD] text-white rounded">

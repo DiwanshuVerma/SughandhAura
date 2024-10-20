@@ -87,13 +87,13 @@ export const Hero = () => {
             {/* Navigation Buttons */}
             <button
                 onClick={handlePrev}
-                className="absolute top-1/2 left-4 md:left-6 transform -translate-y-1/2 bg-[rgba(82,82,82,0.5)] text-white p-2 md:p-1 md:px-6 rounded-md backdrop-blur-md"
+                className=" top-2/3 absolute sm:top-1/2  left-4 md:left-6 transform -translate-y-1/2 bg-[rgba(82,82,82,0.5)] text-white p-2 md:p-1 md:px-6 rounded-md backdrop-blur-md"
             >
                 <FontAwesomeIcon icon={faChevronLeft} size="2x" />
             </button>
             <button
                 onClick={handleNext}
-                className="absolute top-1/2 right-4 md:right-6 transform -translate-y-1/2 bg-[rgba(80,80,80,0.5)] text-white p-2 md:p-1 md:px-6 rounded-md backdrop-blur-md"
+                className="top-2/3 absolute sm:top-1/2  right-4 md:right-6 transform -translate-y-1/2 bg-[rgba(80,80,80,0.5)] text-white p-2 md:p-1 md:px-6 rounded-md backdrop-blur-md"
             >
                 <FontAwesomeIcon icon={faChevronRight} size="2x" />
             </button>

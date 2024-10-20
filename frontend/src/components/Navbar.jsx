@@ -1,6 +1,8 @@
 import { useState } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import '@fortawesome/fontawesome-free/css/all.min.css';
+import logo from '/icon.svg'
+import { useCart } from '../context/cart';
 
 const NavLink = ({ to, children, onClick, isActive }) => (
     <button
@@ -15,6 +17,7 @@ export const Navbar = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const navigate = useNavigate();
     const location = useLocation();
+    const { cartValue } = useCart()
 
     const toggleMenu = () => {
         setIsMenuOpen(!isMenuOpen);
@@ -37,9 +40,10 @@ export const Navbar = () => {
 
 
     return (
-        <nav className="z-30 sm:px-[130px] px-16 flex justify-between items-center w-screen h-[10vh] bg-[#1f1f1f79] text-white backdrop-blur-[3.6px] border border-[rgba(28,27,27,0.08)] fixed top-0 left-0 right-0">
+        <nav className="z-30 px-12 lg:px-24 flex justify-between items-center w-screen h-[13vh] sm:h-[12vh] bg-[#1f1f1f79] text-white backdrop-blur-[3.6px] border border-[rgba(28,27,27,0.08)] fixed top-0 left-0 right-0">
+
             <div className="logo-container relative text-2xl flex items-center">
-                <button onClick={() => handleNavigation('/')}>SA</button>
+                <img src={logo} alt="" className='w-12 cursor-pointer' onClick={() => handleNavigation('/')} />
             </div>
 
             {/* Desktop Navigation Links */}
@@ -59,13 +63,18 @@ export const Navbar = () => {
             </div>
 
             {/* Hamburger Menu */}
-            <div className="block md:hidden text-3xl cursor-pointer" onClick={toggleMenu} aria-expanded={isMenuOpen}>
+            <div className="block md:hidden text-3xl cursor-pointer order-2" onClick={toggleMenu} aria-expanded={isMenuOpen}>
                 <i className="fas fa-bars"></i>
             </div>
-
             <button onClick={handleShopNow} className="p-2 text-[1.1rem] rounded bg-[#6A0DAD] hover:bg-[#9A4DFF] hidden md:block">
                 Shop Now
             </button>
+
+            {/* Cart icon */}
+            <div className=' ml-4 h-10 w-10 flex items-end justify-center relative cursor-pointer'>
+                <i className="fa-solid fa-cart-shopping fa-fade text-2xl" />
+                <span className='p-1 text-lg bg-red-600 rounded-full h-8 w-8 flex justify-center items-center absolute -top-2 -right-3'>{cartValue}</span>
+            </div>
 
             {/* Mobile Navigation Links */}
             <div className={`${isMenuOpen ? 'flex' : 'hidden'} md:hidden flex-col gap-6 text-xl absolute right-0 top-[10vh] bg-[#1f1f1f] py-5 px-8 w-[250px] transition-all duration-300 ease-in-out items-center`}>
@@ -84,6 +93,7 @@ export const Navbar = () => {
                 <button onClick={handleShopNow} className="p-2 text-[1.1rem] rounded bg-[#6A0DAD] hover:bg-[#9A4DFF] w-full text-center">
                     Shop Now
                 </button>
+
             </div>
         </nav>
     );
