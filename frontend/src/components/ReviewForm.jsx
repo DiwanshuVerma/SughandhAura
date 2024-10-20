@@ -7,6 +7,9 @@ export const ReviewForm = ({ submitComment }) => {
 
     const handleSubmit = (e) => {
       e.preventDefault();
+      if(rating>5){
+        alert('Rate between 1 to 5')
+      }else
       submitComment({ userName, comment, rating });
     }
   
@@ -22,8 +25,8 @@ export const ReviewForm = ({ submitComment }) => {
         />
         <input
           type="number"
-          placeholder="Rate it- 1 to 5"
-          value={rating}
+          placeholder="Rate it 1 to 5"
+          // value={rating}
           onChange={(e) => setRating(e.target.value)}
           className="block mb-4 p-2 bg-[#f9eaff] rounded"
           required
