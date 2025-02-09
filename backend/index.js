@@ -27,6 +27,18 @@ mongoose.connect(dbURI)
 const reviewRoutes = require('./routes/reviewRoutes');
 app.use('/reviews', reviewRoutes);
 
+
+// refresh server in every 2 mins
+const refreshServer = async () => {
+    try{
+        const res = await fetch('https://sughandhaura.onrender.com/reviews')
+        console.log(`{server restarted at ${new Date(Date.now())}, Status: ${res.status}}`)
+    } catch(err){
+        console.log('error restaring server', err)
+    }
+}
+setInterval(refreshServer, 180000) // 2mins
+
 // Start server
 app.listen(port, () => {
     console.log(`Server running on http://localhost:${port}`);
