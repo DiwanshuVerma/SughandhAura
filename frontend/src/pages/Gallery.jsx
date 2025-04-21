@@ -45,6 +45,7 @@ export const Gallery = () => {
       >
         <img
           src={image}
+          loading='lazy'
           alt={`Perfume ${index + 1}`}
           className="w-full h-full object-cover"
         />

@@ -18,7 +18,7 @@ const ReviewCard = ({ Key, name, image, title, content }) => {
     const submitComment = async (reviewData) => {
         try {
         
-            const response = await fetch('https://sughandhaura.onrender.com/reviews', {
+            const response = await fetch(`${import.meta.env.VITE_BACKEND_URL}/reviews`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

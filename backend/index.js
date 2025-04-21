@@ -14,6 +14,7 @@ app.use(express.json());
 // connect DB
 
 const dbURI = process.env.MONGO_URI
+const renderURL = process.env.renderURL
 
 mongoose.connect(dbURI)
     .then(() => {
@@ -28,16 +29,15 @@ const reviewRoutes = require('./routes/reviewRoutes');
 app.use('/reviews', reviewRoutes);
 
 
-// refresh server in every 2 mins
+// refresh server in every 10 mins
 const refreshServer = async () => {
     try{
-        const res = await fetch('https://sughandhaura.onrender.com/reviews')
-        console.log(`{server restarted at ${new Date(Date.now())}, Status: ${res.status}}`)
+        const res = await fetch(renderURL)
     } catch(err){
         console.log('error restaring server', err)
     }
 }
-setInterval(refreshServer, 180000) // 2mins
+setInterval(refreshServer, 600000) // 10 mins
 
 // Start server
 app.listen(port, () => {
